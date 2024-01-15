@@ -43,13 +43,15 @@ leftArrow.addEventListener("click", function () {
 		slideNumber --
 	}
 
-	for (let i = 0; i < slides.length; i++) {
-		dots[i].classList.remove("dot_selected")
-	}
+	defilement()
 
-	dots[slideNumber].classList.add("dot_selected")
-	slideImage.src = slides[slideNumber].image
-	tagLineTitle.innerHTML = slides[slideNumber].tagLine
+	// for (let i = 0; i < slides.length; i++) {
+	// 	dots[i].classList.remove("dot_selected")
+	// }
+
+	// dots[slideNumber].classList.add("dot_selected")
+	// slideImage.src = slides[slideNumber].image
+	// tagLineTitle.innerHTML = slides[slideNumber].tagLine
 
 	console.log("Fleche gauche cliquée.")
 	console.log(slideNumber)
@@ -62,7 +64,23 @@ rightArrow.addEventListener("click", function () {
 	} else {
 		slideNumber ++
 	}
+
+	defilement()
 	
+	// for (let i = 0; i < slides.length; i++) {
+	// 	dots[i].classList.remove("dot_selected")
+	// }
+	
+	// dots[slideNumber].classList.add("dot_selected")
+	// slideImage.src = slides[slideNumber].image
+	// tagLineTitle.innerHTML = slides[slideNumber].tagLine
+
+	console.log("Fleche droite cliquée.")
+	console.log(slideNumber)
+})
+
+
+function defilement() {
 	for (let i = 0; i < slides.length; i++) {
 		dots[i].classList.remove("dot_selected")
 	}
@@ -70,18 +88,4 @@ rightArrow.addEventListener("click", function () {
 	dots[slideNumber].classList.add("dot_selected")
 	slideImage.src = slides[slideNumber].image
 	tagLineTitle.innerHTML = slides[slideNumber].tagLine
-
-	console.log("Fleche droite cliquée.")
-	console.log(slideNumber)
-})
-
-
-// console.log(dots)
-// dots[slideNumber].classList.add("dot_selected")
-
-// function fonctionChangementSlide(change) {
-// 	i 
-// }
-
-console.log(slideNumber)
-
+}
