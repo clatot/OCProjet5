@@ -18,7 +18,6 @@ const slides = [
 ]
 
 let slideNumber = 0;
-
 let leftArrow = document.querySelector("#banner .arrow_left")
 let rightArrow = document.querySelector("#banner .arrow_right") 
 let dotsParent = document.querySelector("#banner .dots")
