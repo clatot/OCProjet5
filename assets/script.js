@@ -21,19 +21,18 @@ let slideNumber = 0;
 
 let leftArrow = document.querySelector("#banner .arrow_left")
 let rightArrow = document.querySelector("#banner .arrow_right") 
-let dotsNumber = slides.length
 let dotsParent = document.querySelector("#banner .dots")
 let slideImage = document.querySelector("#banner .banner-img")
 let tagLineTitle = document.querySelector("#banner p")
 
-for (let i = 0; i < dotsNumber; i++) {
+for (let i = 0; i < slides.length; i++) {
 	let dot = document.createElement("span")
 	dot.classList.add("dot")
 	dotsParent.appendChild(dot)
 }
-
 let dots = document.querySelectorAll("#banner .dot")
-console.log(dots)
+
+change()
 
 leftArrow.addEventListener("click", function () {
 
@@ -45,16 +44,7 @@ leftArrow.addEventListener("click", function () {
 
 	defilement()
 
-	// for (let i = 0; i < slides.length; i++) {
-	// 	dots[i].classList.remove("dot_selected")
-	// }
-
-	// dots[slideNumber].classList.add("dot_selected")
-	// slideImage.src = slides[slideNumber].image
-	// tagLineTitle.innerHTML = slides[slideNumber].tagLine
-
 	console.log("Fleche gauche cliquée.")
-	console.log(slideNumber)
 })
 
 rightArrow.addEventListener("click", function () {
@@ -66,25 +56,19 @@ rightArrow.addEventListener("click", function () {
 	}
 
 	defilement()
-	
-	// for (let i = 0; i < slides.length; i++) {
-	// 	dots[i].classList.remove("dot_selected")
-	// }
-	
-	// dots[slideNumber].classList.add("dot_selected")
-	// slideImage.src = slides[slideNumber].image
-	// tagLineTitle.innerHTML = slides[slideNumber].tagLine
 
 	console.log("Fleche droite cliquée.")
-	console.log(slideNumber)
 })
-
 
 function defilement() {
 	for (let i = 0; i < slides.length; i++) {
 		dots[i].classList.remove("dot_selected")
 	}
 	
+	change()
+}
+
+function change() {
 	dots[slideNumber].classList.add("dot_selected")
 	slideImage.src = slides[slideNumber].image
 	tagLineTitle.innerHTML = slides[slideNumber].tagLine
