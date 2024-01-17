@@ -18,11 +18,11 @@ const slides = [
 ]
 
 let slideNumber = 0;
-let leftArrow = document.querySelector("#banner .arrow_left")
-let rightArrow = document.querySelector("#banner .arrow_right") 
-let dotsParent = document.querySelector("#banner .dots")
-let slideImage = document.querySelector("#banner .banner-img")
-let tagLineTitle = document.querySelector("#banner p")
+const leftArrow = document.querySelector("#banner .arrow_left")
+const rightArrow = document.querySelector("#banner .arrow_right") 
+const dotsParent = document.querySelector("#banner .dots")
+const slideImage = document.querySelector("#banner .banner-img")
+const tagLineTitle = document.querySelector("#banner p")
 
 for (let i = 0; i < slides.length; i++) {
 	let dot = document.createElement("span")
